@@ -2,20 +2,20 @@
 
 🛠️ Tech Stack & Tools
 
-Backend: Node.js , Express.js , MongoDB , Mongoose
-Authentication & Security: Passport.js , Passport-Local , Passport-Local-Mongoose , bcrypt
-Frontend Rendering: EJS Templating , Bootstrap
+- Backend: Node.js , Express.js , MongoDB , Mongoose
+- Authentication & Security: Passport.js , Passport-Local , Passport-Local-Mongoose , bcrypt
+- Frontend Rendering: EJS Templating , Bootstrap
 
-Features & Utilities:
-Cloudinary (image upload)
-Mapbox (interactive maps)
-Multer (file uploads)
-Joi (data validation)
-Connect-Mongo (session storage)
-Express-Session
-Flash Messages
-Dotenv
-Cookie-Parser
+- Features & Utilities:
+- Cloudinary (image upload)
+- Mapbox (interactive maps)
+- Multer (file uploads)
+- Joi (data validation)
+- Connect-Mongo (session storage)
+- Express-Session
+- Flash Messages
+- Dotenv
+- Cookie-Parser
 
 
 ✨ Features : 
