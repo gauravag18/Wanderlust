@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <h3>Edit Your Listing </h3>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <table for="title" class="form-label">Title</table>
+                    <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <table for="description" class="form-label">Description</table>
+                    <textarea name="listing[description]" type="text" class="form-control" required><%= listing.description %></textarea>
+                </div>
+                <div class="mb-3">
+                    <table for="image" class="form-label">Image Link</table>
+                    <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <table for="price" class="form-label">Price</table>
+                    <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-7">
+                        <table for="location" class="form-label">Location</table>
+                        <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3 col-md-5">
+                        <table for="country" class="form-label">Country</table>
+                        <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required>
+                    </div>
+                </div>
+                <button class="btn-btn-dark edit-btn mt-3">Edit</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</body>
