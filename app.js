@@ -91,9 +91,9 @@ app.delete("/listings/:id",wrapAsync(async (req,res) => {
 }));
 
 //IF SEARCH FOR A NEW PAGE 
-// app.all("*",(req,res,next)=>{
-//     next(new ExpressError(404,"Page Not Found"));
-// });
+// app.all("*", (req, res, next)=>{
+//     next(new ExpressError(404, "Page Not Found!"))
+// })
 
 //MIDDLEWARE FOR ERROR HANDLING
 app.use((err,req,res,next)=>{
