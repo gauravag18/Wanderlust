@@ -6,7 +6,7 @@
 - Authentication & Security: Passport.js , Passport-Local , Passport-Local-Mongoose , bcrypt
 - Frontend Rendering: EJS Templating , Bootstrap
 
-- Features & Utilities:
+  Features & Utilities:
 - Cloudinary (image upload)
 - Mapbox (interactive maps)
 - Multer (file uploads)
