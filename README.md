@@ -4,9 +4,9 @@ WanderLust is a full-featured web application inspired by Airbnb, built using th
 
 🛠️ Tech Stack & Tools
 
-Backend: Node.js , Express.js , MongoDB , Mongoose
-Authentication & Security: Passport.js , Passport-Local , Passport-Local-Mongoose , bcrypt
-Frontend Rendering: EJS Templating , Bootstrap
+- Backend: Node.js , Express.js , MongoDB , Mongoose
+- Authentication & Security: Passport.js , Passport-Local , Passport-Local-Mongoose , bcrypt
+- Frontend Rendering: EJS Templating , Bootstrap
 
 Features & Utilities:
 - Cloudinary (image upload)
