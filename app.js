@@ -3,7 +3,10 @@ const app = express();
 const mongoose = require ("mongoose");
 const path= require("path");
 const methodOverride = require ("method-override");
+const ExpressError = require("./utils/ExpressError.js");
 const ejsMate = require ("ejs-mate");
+const session = require("express-session");//REQUIRED SESSIONS
+const flash = require("connect-flash");//REQUIRED CONNECT-FLASH
 
 const listings = require("./routes/listing.js");
 const reviews = require ("./routes/review.js");
@@ -27,8 +30,31 @@ app.use(methodOverride("_method"));
 app.engine('ejs',ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
+//COOKIE AND SESSIONS
+const sessionOptions = {
+    secret : "mysupersecretcode",
+    resave : false,
+    saveUninitialized : true,
+    cookie : {
+        expires : Date.now() + 7*24*60*60*1000 ,//milli-seconds in one week
+        maxAge :7*24*60*60*1000 ,
+        httpOnly:true,
+    }
+};
+
 app.get("/",(req,res)=>{
     res.send("HI,I AM ROOT");
+});
+
+app.use(session(sessionOptions));
+app.use(flash());
+//USING SESSIONS AND FLASH BEFORE ROUTES
+
+//MIDDLEWARE FOR FLASH 
+app.use((req,res,next)=>{
+    res.locals.success=req.flash("success");
+    res.locals.error=req.flash("error");
+    next();
 });
 
 app.use("/listings",listings);
