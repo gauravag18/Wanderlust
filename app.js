@@ -66,6 +66,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
+    res.locals.currUser=req.user;//store details fo current user so we use it in ejs template navbar
     next();
 });
 
